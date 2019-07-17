@@ -1,2 +1,28 @@
 #+TITLE: HN top stories archive
 
+To use, install =cronie=, looks like I need to start the cronie
+service in systemctl.
+
+Register the crontab jobs:
+
+
+Modify the path in job.cron before running.
+
+- crontab job.cron :: This will actually replace my current list of
+  crontab jobs with the new list.
+
+Other crontab commands:
+
+- crontab -l :: list all cron jobs
+- crontab -e :: launch EDITOR for current list
+- crontab -r :: remove the entire list
+
+Looks like crontab requires:
+
+- it must be the full path to the script, not a command with arguments
+- the script must be executable
+- the cronie daemon must be running
+
+
+* TODO will the job continue after reboot?
+
